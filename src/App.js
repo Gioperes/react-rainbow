@@ -19,26 +19,29 @@ function App(){
         )
     })
 
-    return (
-      <div className="App">
-      {colors.map((color, i) => 
-          <ColorBlock keycolor={color} />
-      )}
-  </div>
-  
-    )
-
-
     const addColor = (newColor) => {
         setColors([...colors, newColor])
     }
 
     return (
-        <div className="App">
-            {colorMap}
-            <ColorForm addColor={addColor} />
-        </div>
+      <div className="App">
+        <h1>App</h1>
+      {colors.map((color, i) => 
+          <ColorBlock color={color} />
+      )}
+      <ColorForm addColor={addColor}/>
+  </div>
+  
     )
+
+
+
+    // return (
+    //     <div className="App">
+    //         {colorMap}
+    //         <ColorForm addColor={addColor} />
+    //     </div>
+    // )
     }
 
 export default App;
